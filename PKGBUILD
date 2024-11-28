@@ -1,19 +1,16 @@
 # Maintainer: Bouteiller a2n Alan <a2n.dev@pm.me>
 
-# git rev-parse tagName
-# 6.3.2
 _tag=afd1fc5a8e79f80be23952194d8ffd3c33d62ebf
 _plasmoidName="a2n.archupdate.plasmoid"
 _souceName="archupdate"
 
-pkgname="kdeplasma-arch-update-notifier-git"
-# pkgver is updated automatically by the pkgver step
-pkgver=6.3.2
-pkgrel=3
+pkgname="plasma6-applets-arch-update-notifier"
+pkgver=6.3.2.r0.gcb8f18e
+pkgrel=1
 pkgdesc="KDE plasmoid that lets you know when arch updates are required. Takes all repo's into account (core, extra, aur, ...)."
 arch=("any")
 url="https://github.com/bouteillerAlan/archupdate"
-license=("GPL3")
+license=("GPL-3.0-or-later")
 source=("git+${url}.git#tag=${_tag}?signed")
 depends=("konsole" "pacman-contrib" "kdialog")
 makedepends=("git")
@@ -25,7 +22,7 @@ validpgpkeys=(
 
 pkgver() {
   cd "${_souceName}"
-  git describe --tags | sed 's/^v//'
+  git describe --long --abbrev=7 | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 package() {

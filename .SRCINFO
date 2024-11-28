@@ -1,10 +1,10 @@
-pkgbase = kdeplasma-arch-update-notifier-git
+pkgbase = plasma6-applets-arch-update-notifier
 	pkgdesc = KDE plasmoid that lets you know when arch updates are required. Takes all repo's into account (core, extra, aur, ...).
 	pkgver = 6.3.2
-	pkgrel = 3
+	pkgrel = 1
 	url = https://github.com/bouteillerAlan/archupdate
 	arch = any
-	license = GPL3
+	license = GPL-3.0-or-later
 	makedepends = git
 	depends = konsole
 	depends = pacman-contrib
@@ -15,4 +15,4 @@ pkgbase = kdeplasma-arch-update-notifier-git
 	validpgpkeys = 6A2ECC8A396F8A943A109A1E0F11C2A6BF79111E
 	sha256sums = SKIP
 
-pkgname = kdeplasma-arch-update-notifier-git
+pkgname = plasma6-applets-arch-update-notifier
