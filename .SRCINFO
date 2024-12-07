@@ -1,6 +1,6 @@
 pkgbase = plasma6-applets-arch-update-notifier
 	pkgdesc = KDE plasmoid that lets you know when arch updates are required. Takes all repo's into account (core, extra, aur, ...).
-	pkgver = 6.3.2
+	pkgver = 6.3.2.r0.gcb8f18e
 	pkgrel = 1
 	url = https://github.com/bouteillerAlan/archupdate
 	arch = any
